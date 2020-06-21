@@ -5,6 +5,12 @@ This plugin is coded entirely in (yes, the outdated version of) HTML, with JS an
 # Open Broadcasting Software
 This plugin is meant to be a browser source plugin for OBS, Streamlabs OBS (SLOBS), and potentially Xsplit, however it has not been tested in any of them yet.
 # Current Release Information
+This plugin is in Beta Version 0.5.1
+This is an update from Beta Version 0.5.0
+Added Features Include:
+    1) Added raid detection and responce. 
+    2) Added sub detection and responce.
+# b0.5.0
 This plugin is in Beta Version 0.5.0
 This is an update from Beta Version 0.1.5
 Added Features Include:
