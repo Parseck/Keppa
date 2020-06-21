@@ -25,16 +25,43 @@
 			console.log( user + ": used !hello" );
 			this.hellopic();
 														}
+		if( command === "hype" ){
+			console.log( user + ": used !hype" );
+			this.hypepic();
+														}
+		if( command === "commision" ){
+			console.log( user + ": used !commision" );
+			this.commpic();
+														}
+		if( command === "whomade" ){
+			console.log( user + ": used !whomade" );
+			this.whomadepic();
+														}
+		if( command === "totallyhype" ){
+			console.log( user + ": used !totallyhype" );
+			this.tothypic();
+														}
+		if( command === "ksocials" ){
+			console.log( user + ": used !ksocials" );
+			this.socialpic();
+														}
 																			}
+	  ComfyJS.onJoin = ( user, self, extra ) => {
+			console.log( user + " has joined." )
+			this.joinpic();
+												}
 	  ComfyJS.onRaid = ( user, viewers, extra ) => {
 			console.log( user + ": raided with ", viewers);
 			this.raidpic();
 												   }
 	  ComfyJS.onSub = ( user, message, subTierInfo, extra ) => {
-			console.log( user + "subbed with the message: ", message + " at ", subTierInfo );
+			console.log( user + " subbed with the message: ", message + " at ", subTierInfo );
 			this.subpic();
 															 }
-
+	  ComfyJS.onCheer = ( user, message, bits, flags, extra ) => {
+			console.log( user + " cheered ", bits + " with the message: ", message );
+			this.cheerpic();
+																 }
 
       ComfyJS.Init( "claireunaware" );
     </script>
@@ -55,8 +82,24 @@ function yepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandye.png");
 	this.demo()
 }
-function raidpic(){
-	document.getElementById("kappanocap").setAttribute("src", "raidalert.png");
+function hypepic(){
+	document.getElementById("kappanocap").setAttribute("src", "commandhype.png");
+	this.demo()
+}
+function commpic(){
+	document.getElementById("kappanocap").setAttribute("src", "commandcommision.png");
+	this.demo()
+}
+function whomadepic(){
+	document.getElementById("kappanocap").setAttribute("src", "commandwhomade.png");
+	this.demo()
+}
+function tothypic(){
+	document.getElementById("kappanocap").setAttribute("src", "commandtotallyhype.png");
+	this.demo()
+}
+function socialpic(){
+	document.getElementById("kappanocap").setAttribute("src", "commandsocials.png");
 	this.demo()
 }
 function raidpic(){
@@ -71,11 +114,15 @@ function subpic(){
 	document.getElementById("kappanocap").setAttribute("src", "subalert.png");
 	this.demo()
 }
+function cheerpic(){
+	document.getElementById("kappanocap").setAttribute("src", "cheeralert.png");
+	this.demo()
+}
 	function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }		
 		async function demo() {
-  console.log("yecommand executed");
+  console.log("command executed");
   console.log('Starting sleep...');
   await sleep(5000);
 	document.getElementById("kappanocap").setAttribute("src", "keppanokep.png");
