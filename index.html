@@ -30,7 +30,7 @@
 			console.log( user + ": raided with ", viewers);
 			this.raidpic();
 												   }
-	  ComfyJS.onSub ( user, message, subTierInfo, extra ) => {
+	  ComfyJS.onSub = ( user, message, subTierInfo, extra ) => {
 			console.log( user + "subbed with the message: ", message + " at ", subTierInfo );
 			this.subpic();
 															 }
