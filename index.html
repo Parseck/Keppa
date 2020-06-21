@@ -4,28 +4,38 @@
   </head>
   <body>
   <img id="kappanocap" src="keppanokep.png" height="400" width="800"></img>
-   <script type="text/javascript" onchange="displayImage(this)">
+  <script type="text/javascript" onchange="displayImage(this)">
       ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 			console.log( user + ":", message );	
 																}
 	  ComfyJS.onCommand = ( user, command, message, flags, self, extra ) => {
 		if( command === "unaware" ){
 			console.log( user + ": used !unaware" );
-			this.unawarepic()
+			this.unawarepic();
 														}
-
 		if( command === "awake" ){
 			console.log( user + ": used !awake" );
-			this.awakepic()
+			this.awakepic();
 														}
 		if( command === "ye" ){
 			console.log( user + ": used !ye" );
-			this.yepic()
+			this.yepic();
 														}
 		if( command === "hello" ){
 			console.log( user + ": used !hello" );
-			this.hellopic()
+			this.hellopic();
 														}
+																			}
+	  ComfyJS.onRaid = ( user, viewers, extra ) => {
+			console.log( user + ": raided with ", viewers);
+			this.raidpic();
+												   }
+	  ComfyJS.onSub ( user, message, subTierInfo, extra ) => {
+			console.log( user + "subbed with the message: ", message + " at ", subTierInfo );
+			this.subpic();
+															 }
+
+
       ComfyJS.Init( "claireunaware" );
     </script>
 	<script type="text/javascript">
@@ -43,6 +53,22 @@ function hellopic(){
 }
 function yepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandye.png");
+	this.demo()
+}
+function raidpic(){
+	document.getElementById("kappanocap").setAttribute("src", "raidalert.png");
+	this.demo()
+}
+function raidpic(){
+	document.getElementById("kappanocap").setAttribute("src", "raidalert.png");
+	this.demo()
+}
+function joinpic(){
+	document.getElementById("kappanocap").setAttribute("src", "joinchat.png");
+	this.demo()
+}
+function subpic(){
+	document.getElementById("kappanocap").setAttribute("src", "subalert.png");
 	this.demo()
 }
 	function sleep(ms) {
