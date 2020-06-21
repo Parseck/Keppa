@@ -7,20 +7,20 @@ This plugin is meant to be a browser source plugin for OBS, Streamlabs OBS (SLOB
 # Current Release Information
 This plugin is in Beta Version 0.5.1 <br>
 This is an update from Beta Version 0.5.0 <br>
-Added Features Include:
+Added Features Include: <br>
     1) Added raid detection and responce. <br>
     2) Added sub detection and responce. <br>
 # b0.5.0
-This plugin is in Beta Version 0.5.0
-This is an update from Beta Version 0.1.5
-Added Features Include:
-    1) Bugs smooshed.
-    2) All current commands are working.
+This plugin is in Beta Version 0.5.0 <br>
+This is an update from Beta Version 0.1.5 <br>
+Added Features Include:<br>
+    1) Bugs smooshed.<br>
+    2) All current commands are working. <br>
 # b0.1.5 Update information 
-This plugin is in Beta Version 0.1.5
-This is an update from Beta Version 0.1.0
-Added features include:
-    1) Added visuals
-    2) Added commands
-Bugs include:
-    1) Only one command works at the moment.
+This plugin is in Beta Version 0.1.5 <br>
+This is an update from Beta Version 0.1.0 <br>
+Added features include: <br>
+    1) Added visuals <br>
+    2) Added commands <br>
+Bugs include: <br>
+    1) Only one command works at the moment. <br>
