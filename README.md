@@ -1,5 +1,8 @@
 # Keppa
 A personal OBS plugin meant to mimic kappamon with much less functionality but much more personalization.
+# Keppa Official Socials:
+Keppa currently only has a discord. <br>
+https://discord.gg/2KAZ5z5
 # HTML, JS, ComfyJS
 This plugin is coded entirely in (yes, the outdated version of) HTML, with JS and ComfyJS.
 # Open Broadcasting Software
