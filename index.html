@@ -7,10 +7,25 @@
   <script type="text/javascript" onchange="displayImage(this)">
       ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 			console.log( user + ":", message );	
-			if ( message === "hi" ) {
+			var low = message.includes("hi");
+			var high = message.includes("Hi");
+			var lohi = message.includes("hI");
+			if ( low === true ) {
 				this.hellopic();
 				console.log( user + " said hi.");
-									}
+								}
+				else if ( high === true ){
+					this.hellopic();
+					console.log( user + " said hi.");
+										 }
+				else if ( lohi === true ){
+					this.hellopic();
+					console.log ( user + " said hi.");
+										 }
+				else {
+					console.log ( "Unkown Error Encountered.");
+					this.getmyattentionpls();
+					 }
 																}
 	  ComfyJS.onCommand = ( user, command, message, flags, self, extra ) => {
 		if( command === "unaware" ){
@@ -24,10 +39,6 @@
 		if( command === "ye" ){
 			console.log( user + ": used !ye" );
 			this.yepic();
-														}
-		if( command === "hello" ){
-			console.log( user + ": used !hello" );
-			this.hellopic();
 														}
 		if( command === "khype" ){
 			console.log( user + ": used !khype" );
