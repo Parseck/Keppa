@@ -7,6 +7,10 @@
   <script type="text/javascript" onchange="displayImage(this)">
       ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 			console.log( user + ":", message );	
+			if ( message === "hi" ) {
+				this.hellopic();
+				console.log( user + " said hi.");
+									}
 																}
 	  ComfyJS.onCommand = ( user, command, message, flags, self, extra ) => {
 		if( command === "unaware" ){
@@ -62,61 +66,100 @@
 			console.log( user + " cheered ", bits + " with the message: ", message );
 			this.cheerpic();
 																 }
-
+	  ComfyJS.onResub = ( user, message, streamMonths, cumulativeMonths, subTierInfo, extra ) => {
+			console.log( user + " resubbed at ", subTeirInfo + " for ", streamMonths + " and a total of", cumulativeMonths );
+			this.resubpic();
+																								 }
+	  ComfyJS.onSubGift = ( gifterUser, streakMonths, recipientUser, senderCount, subTierInfo, extra ) => {
+			console.log( gifterUser + " gifted ", senderCount + " users at ", subTeirInfo);
+			this.giftsubpic();
+																										  }
+	  ComfyJS.onSubMysteryGift = ( gifterUser, numbOfSubs, senderCount, subTierInfo, extra ) => {
+			console.log( gifterUser + " gifted ", numbOfSubs + " to ", senderCount + " at ", subTeirInfo);
+			this.submystgiftpic();
+																							 }
+	  ComfyJS.onGiftSubContinue = ( user, sender, extra ) => {
+			console.log( sender + " gifted user ", user + "a sub.");
+			this.giftsubcontinpic();
+														  }
+	  ComfyJS.onError = ( error ) => {
+			console.log( error + " was encountered." );
+			this.getmyattentionpls();
+								  }
       ComfyJS.Init( "claireunaware" );
     </script>
 	<script type="text/javascript">
 function unawarepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandunaware.png");
-	this.demo()
+	this.demo();
 }
 function awakepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandawake.png");
-	this.demo()
+	this.demo();
 }
 function hellopic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandhello.png");
-	this.demo()
+	this.demo();
 }
 function yepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandye.png");
-	this.demo()
+	this.demo();
 }
 function hypepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandhype.png");
-	this.demo()
+	this.demo();
 }
 function commpic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandcommision.png");
-	this.demo()
+	this.demo();
 }
 function whomadepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandwhomade.png");
-	this.demo()
+	this.demo();
 }
 function tothypic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandtotallyhype.png");
-	this.demo()
+	this.demo();
 }
 function socialpic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandsocials.png");
-	this.demo()
+	this.demo();
 }
 function raidpic(){
 	document.getElementById("kappanocap").setAttribute("src", "raidalert.png");
-	this.demo()
+	this.demo();
 }
 function joinpic(){
 	document.getElementById("kappanocap").setAttribute("src", "joinchat.png");
-	this.demo()
+	this.demo();
 }
 function subpic(){
 	document.getElementById("kappanocap").setAttribute("src", "subalert.png");
-	this.demo()
+	this.demo();
 }
 function cheerpic(){
 	document.getElementById("kappanocap").setAttribute("src", "cheeralert.png");
-	this.demo()
+	this.demo();
+}
+function giftsubpic(){
+	document.getElementById("kappanocap").setAttribute("src", "giftsubpic.png");
+	this.demo();
+}
+function giftsubcontinpic(){
+	document.getElementById("kappanocap").setAttribute("src", "giftsubcontinpic.png");
+	this.demo();
+}
+function submystgiftpic(){
+	document.getElementById("kappanocap").setAttribute("src", "submystgiftpic.png");
+	this.demo();
+}
+function resubpic(){
+	document.getElementById("kappanocap").setAttribute("src", "resubpic.png");
+	this.demo();
+}
+function getmyattentionpls(){
+	document.getElementById("kappanocap").setAttribute("src", "getmyattentionpls.png");
+	this.demo();
 }
 	function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -126,7 +169,7 @@ function cheerpic(){
   console.log('Starting sleep...');
   await sleep(5000);
 	document.getElementById("kappanocap").setAttribute("src", "keppanokep.png");
-}
+}		
 </script>
   </body>
 </html>
