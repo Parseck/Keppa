@@ -1,32 +1,30 @@
 <html>
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
-  </head>
-  <body>
-  <img id="kappanocap" src="keppanokep.png" height="400" width="800"></img>
-  <script type="text/javascript" onchange="displayImage(this)">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+</head>
+<body>
+<img id="kappanocap" src="keppanokep.png" height="400" width="800"></img>
+<script type="text/javascript" onchange="displayImage(this)">
       ComfyJS.onChat = ( user, message, flags, self, extra ) => {
 			console.log( user + ":", message );	
-			var low = message.includes("hi");
-			var high = message.includes("Hi");
-			var lohi = message.includes("hI");
-			if ( low === true ) {
+			var lowermessage = message.toLowerCase();
+			var y = lowermessage.includes("hi");
+			if ( y === true ) {
 				this.hellopic();
-				console.log( user + " said hi.");
+				console.log( user + ": said hi.");
 								}
-				else if ( high === true ){
-					this.hellopic();
-					console.log( user + " said hi.");
+			var x = lowermessage.includes("thank you for joining the unaware");
+			if ( flags.mod && x === true) {
+				this.followpic();
+				console.log( "there was a follow..." );
+										  }
+																
+			var z = lowermessage.includes("thank you for the tip")
+			if (flags.mod && z === true) {
+				this.tippic();
+				console.log("there was a tip...");
 										 }
-				else if ( lohi === true ){
-					this.hellopic();
-					console.log ( user + " said hi.");
-										 }
-				else {
-					console.log ( "Unkown Error Encountered.");
-					this.getmyattentionpls();
-					 }
-																}
+																 }
 	  ComfyJS.onCommand = ( user, command, message, flags, self, extra ) => {
 		if( command === "unaware" ){
 			console.log( user + ": used !unaware" );
@@ -94,12 +92,12 @@
 			this.giftsubcontinpic();
 														  }
 	  ComfyJS.onError = ( error ) => {
-			console.log( error + " was encountered." );
+			console.log( error + ": that error was encountered." );
 			this.getmyattentionpls();
 								  }
       ComfyJS.Init( "claireunaware" );
     </script>
-	<script type="text/javascript">
+<script type="text/javascript">
 function unawarepic(){
 	document.getElementById("kappanocap").setAttribute("src", "commandunaware.png");
 	this.demo();
@@ -153,15 +151,15 @@ function cheerpic(){
 	this.demo();
 }
 function giftsubpic(){
-	document.getElementById("kappanocap").setAttribute("src", "giftsubpic.png");
+	document.getElementById("kappanocap").setAttribute("src", "subalert.png");
 	this.demo();
 }
 function giftsubcontinpic(){
-	document.getElementById("kappanocap").setAttribute("src", "giftsubcontinpic.png");
+	document.getElementById("kappanocap").setAttribute("src", "subgiftcontalert.png");
 	this.demo();
 }
 function submystgiftpic(){
-	document.getElementById("kappanocap").setAttribute("src", "submystgiftpic.png");
+	document.getElementById("kappanocap").setAttribute("src", "subalert.png");
 	this.demo();
 }
 function resubpic(){
@@ -170,6 +168,14 @@ function resubpic(){
 }
 function getmyattentionpls(){
 	document.getElementById("kappanocap").setAttribute("src", "getmyattentionpls.png");
+	this.demo();
+}
+function followpic(){
+	document.getElementById("kappanocap").setAttribute("src", "followalert.png");
+	this.demo();
+}
+function tippic(){
+	document.getElementById("kappanocap").setAttribute("src", "tipalert.png");
 	this.demo();
 }
 	function sleep(ms) {
@@ -182,5 +188,5 @@ function getmyattentionpls(){
 	document.getElementById("kappanocap").setAttribute("src", "keppanokep.png");
 }		
 </script>
-  </body>
+</body>
 </html>
